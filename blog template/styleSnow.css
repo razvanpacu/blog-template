@@ -1,0 +1,135 @@
+html{
+ background-color: aliceblue;
+}
+
+.title{
+    font-family: 'Fira Sans' , sans-serif;
+    padding-top: 10rem;
+    text-align: center;
+    font-size: 7vw;
+    opacity: 0.8;
+    color: black;
+    text-shadow: 6px 3px 6px rgba(150, 150, 150, 1);
+}
+
+.snowboard_img{
+    height: 100vh;
+	width: 100%;
+	background-size: cover;
+	display: table;
+    background-attachment: fixed;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 1.2vw;
+    line-height: 150%;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+    margin-bottom: 150px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.content{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 17px;
+    text-align: justify;
+    
+}
+
+h2{
+    color: royalblue;
+}
+
+.partie{
+    height: 300px; 
+    width: 450px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.statiuni p{
+    margin-top: 10vh;
+    margin-bottom: 10vh
+}
+
+h4{
+    font-size: 2vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.down_photo img{
+    width: 27rem;
+    height: 35rem;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.me{
+width: 110px;
+float: left;
+margin-right: 40px;
+border-radius: 50%;
+}
+
+@media(max-width: 768px){
+    .partie{
+        width: 100%;
+        height: auto;
+        background-size: cover ;
+        float: none;
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+
+    .snowboard_img{
+        height: auto;
+    }
+
+    h4{
+        font-size: 12vw;
+        text-align: center;
+    }
+
+    body {
+        font-size: 6vw;
+        text-align: inherit
+    }
+
+    .column{
+        float: none;
+        text-align: justify;
+        margin-right: 0%;
+        width: 100%;
+        height: auto;
+    }
+
+    h2{
+        font-size: 8vw;
+    }
+
+    .down_photo img{
+        display: none;
+    }
+    
+    .useful{
+        margin-top: 25vh;
+    }
+}

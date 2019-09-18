@@ -1,0 +1,261 @@
+ html{
+	 scroll-behavior: smooth;
+	 font-family: 'Fira Sans' , sans-serif;
+ }
+ 
+ /* stiky nav*/
+ a:hover{
+	 text-decoration: none;
+	 color: inherit;
+ }
+ 
+ nav{
+	position: absolute; 
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px 100px;
+	box-sizing: border-box;
+	transition: .3s;
+	z-index: 1;
+} 
+
+nav.black {
+	background: rgba(0,0,0,0.8);
+	height: 100px;
+	padding: 10px 100px;
+	position: sticky;
+}
+
+nav ul {
+	list-style: none;
+	float: right;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav ul li{
+	list-style: none;
+}
+
+nav ul li a {
+	font-size: 1.3vw;
+	line-height: 80px;
+	color: rgba(0,0,0,0.8);
+	padding: 12px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: .3s;
+}
+
+nav.black ul li a{
+	color: #fff;
+}
+
+nav ul li a:focus {
+	outline: none;
+}  
+
+ ul li a.active{
+	background: #E2472F;
+	color: #fff;
+	border-radius: 6px;
+}
+/* parallax efect */
+body{
+	margin: 0;
+	padding: 0;
+}
+
+#box1{
+	height: 100vh;
+	width: 100%;
+	background-image: url(img/snowboard.jpg);
+	background-size: cover;
+	display: table;
+	background-attachment: fixed;
+}
+
+#box2{
+	height: 100vh;
+	width: 100%;
+	background-image: url(img/car2.jpg);
+	background-size: cover;
+	display: table;
+	background-attachment: fixed;
+}
+
+#box3{
+	height: 100vh;
+	width: 100%;
+	background-image: url(img/paco.jpg);
+	background-size: cover;
+	display: table;
+	background-attachment: fixed;
+}
+
+#box4{
+	height: 100vh;
+	width: 100%;
+	background-image: url(img/cod2.jpg);
+	background-size: cover;
+	vertical-align: middle;
+	display: table;
+	background-attachment: fixed;
+}
+
+.title-firstPag {
+	font-family: 'Fira Sans' , sans-serif;
+	font-size: 11vw;
+	color: white;
+	margin: 0;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	opacity: 0.7;
+	outline-color: none;
+}
+
+.title-firstPag a:hover{
+	text-decoration: none;
+	color: white;
+}
+
+.title-firstPag a{
+	color: inherit;
+}
+
+/* overlay navigation */
+
+#toggle {
+	position: absolute;
+	right: 20px;
+	top: 14px;
+	z-index: 999;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	float: right;
+	transition: all 0.3s ease-out;
+	visibility: hidden;
+	opacity: 0;
+}
+
+#toggle .span{
+	height: 3px;
+	background: #000000;
+	transition: all 0.3s ease-out;
+	backface-visibility: hidden;
+	margin: 5px auto;
+	z-index: 9999;
+}
+
+#toggle.on #one {
+	background: #fff;
+	transform: rotate(45deg) translateX(2px) translateY(4px);
+}
+
+#toggle.on #two {
+	opacity: 0;
+}
+
+#toggle.on #three {
+	background: #fff;
+	transform: rotate(-45deg) translateX(8px) translateY(-10px);
+}
+
+#resize{
+	z-index: 1;
+	top: 0px;
+	position: absolute;
+	background: #000;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s ease-out;
+	display: table;
+}
+
+#resize #menu {
+	height: 50px;
+	display: table-cell;
+	vertical-align: middle;
+	list-style-type: none;
+}
+
+#resize {
+   align-items: center;
+   
+   text-align: center;
+   padding: 20px 0;
+   font-size: 25vw;
+   min-height: 50px;
+   font-weight: 200;
+   cursor: pointer;
+   transition: all 0.3s ease-out;
+}
+
+#resize #menu li a {
+   color: #fff;
+}
+
+#resize.active {
+   visibility: visible;
+   opacity: 0.99;
+}
+
+/* for phones */
+@media(max-width: 768px) {
+	.black {
+	visibility: hidden;
+	}
+	#box1 {
+		background-position-x: 72%;
+	}
+
+	.title-firstPag {
+	    font-size: 18vw;
+	}
+
+	#box2 {
+		background-position-x: 50.4%;
+	}
+
+	#box3 {
+       background-position-x: 50%;
+	 }
+	 
+	#box4 {
+		background-position-x: 50%;
+	}
+	
+    #toggle {
+	   visibility: visible;
+	   opacity: 1;
+	   margin-top: 6px;
+   }
+
+   nav #brand {
+	   margin-left: 18px;
+   }
+
+   #menu a {
+	   font-family: 'Fira Sans' , sans-serif;
+	   font-weight: 200;
+	   font-size: 20px;
+   }
+   
+   nav #menu{
+	   display: none;
+   }
+  
+}
+
+@media(min-width: 768px) {
+   #resize {
+	   visibility: hidden !important;
+   }
+
+}
